@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page-overlay"></div>
+
+  <nav id="glass-nav">
+    <a href="index.html" class="nav-item active" data-label="Home" data-page-index="0">
+      <img src="images/homeicon.png" alt="Home" />
+    </a>
+    <a href="blog.html" class="nav-item" data-label="Blog" data-page-index="1">
+      <img src="images/blogicon.png" alt="Blog" />
+    </a>
+    <a href="gallery.html" class="nav-item" data-label="Gallery" data-page-index="2">
+      <img src="images/galleryicon.png" alt="Gallery" />
+    </a>
+    <a href="contact.html" class="nav-item" data-label="Contact" data-page-index="3">
+      <img src="images/contacticon.png" alt="Contact" />
+    </a>
+  </nav>
+
+  <div id="page-wrapper">
+
+    <!-- Profile photo moved higher: top ~28% instead of 42% -->
+    <div class="bubble-profile" style="width:200px;height:200px;">
+      <img src="images/profile.png" alt="Profile photo" />
+    </div>
+
+    <div id="home-bio">
+      <div class="bio-bg">
+        <div class="bio-content">
+          <h1>Hello, welcome to my page. my name is Intan</h1>
+          <p class="tagline"> I'm an Artist and an IT student </p>
+          <p>
+            In here i'll talk about my interest, passion, and experience so you'll get to know me here.
+            I'm still a college student, i'm in my 4th semester now. I moved from my hometown to study,
+            i've been away for 4 years now and i very much comfortable in this place. I want to be a game developer
+            and can't wait to start making the project i've been thinking on. I would say i'm a ambivert and i like savory food
+            more than sweets. Didn't i mention i'm an artist? you can check some of my art in the gallery and some random cool photos i took.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bubble-layer">
+
+      <div class="bubble"
+           style="width:160px;height:160px;left:5%;top:15%;
+                  animation-duration:6.2s;animation-delay:-1.1s;"
+           data-parallax-speed="0.02">
+        <img src="images/bubble3.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:210px;height:210px;right:7%;top:10%;
+                  animation-duration:7.8s;animation-delay:-3.5s;"
+           data-parallax-speed="0.014"
+           data-parallax-invert="true">
+        <img src="images/bubble1.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:130px;height:130px;left:3%;top:52%;
+                  animation-duration:5.5s;animation-delay:-0.7s;"
+           data-parallax-speed="0.025">
+        <img src="images/bubble5.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:180px;height:180px;right:5%;bottom:15%;
+                  animation-duration:8.3s;animation-delay:-5.2s;"
+           data-parallax-speed="0.016"
+           data-parallax-invert="true">
+        <img src="images/bubble2.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:110px;height:110px;left:30%;top:7%;
+                  animation-duration:4.9s;animation-delay:-2.3s;"
+           data-parallax-speed="0.03">
+        <img src="images/bubble6.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:145px;height:145px;left:13%;bottom:10%;
+                  animation-duration:6.7s;animation-delay:-4.1s;"
+           data-parallax-speed="0.019">
+        <img src="images/bubble4.png" alt="" />
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

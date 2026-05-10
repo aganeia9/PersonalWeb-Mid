@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page-overlay"></div>
+
+  <nav id="glass-nav">
+    <a href="index.html" class="nav-item" data-label="Home" data-page-index="0">
+      <img src="images/homeicon.png" alt="Home" />
+    </a>
+    <a href="blog.html" class="nav-item" data-label="Blog" data-page-index="1">
+      <img src="images/blogicon.png" alt="Blog" />
+    </a>
+    <a href="gallery.html" class="nav-item active" data-label="Gallery" data-page-index="2">
+      <img src="images/galleryicon.png" alt="Gallery" />
+    </a>
+    <a href="contact.html" class="nav-item" data-label="Contact" data-page-index="3">
+      <img src="images/contacticon.png" alt="Contact" />
+    </a>
+  </nav>
+
+  <div id="page-wrapper">
+
+    <!-- Masonry-style gallery: photos at natural aspect ratio + videos -->
+    <div id="gallery-grid">
+      <div class="gallery-item"><img src="images/photo1.png" alt="Photo 1" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo2.png" alt="Photo 2" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item gallery-item--video">
+        <video src="images/video1.mp4" loop muted playsinline></video>
+        <div class="gallery-overlay video-overlay"><span class="play-btn">▶</span></div>
+      </div>
+      <div class="gallery-item"><img src="images/photo3.png" alt="Photo 3" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo4.png" alt="Photo 4" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo5.png" alt="Photo 5" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo6.png" alt="Photo 6" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item gallery-item--video">
+        <video src="images/video2.mp4" loop muted playsinline></video>
+        <div class="gallery-overlay video-overlay"><span class="play-btn">▶</span></div>
+      </div>
+      <div class="gallery-item"><img src="images/photo7.png" alt="Photo 7" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo8.png" alt="Photo 8" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo9.png" alt="Photo 9" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo10.png" alt="Photo 10" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo11.png" alt="Photo 11" /><div class="gallery-overlay"><span>⤢</span></div></div>
+      <div class="gallery-item"><img src="images/photo12.png" alt="Photo 12" /><div class="gallery-overlay"><span>⤢</span></div></div>
+    </div>
+
+    <div class="bubble-layer">
+
+      <div class="bubble"
+           style="width:140px;height:140px;left:1%;top:12%;
+                  animation-duration:7.3s;animation-delay:-2.0s;"
+           data-parallax-speed="0.02">
+        <img src="images/bubble2.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:110px;height:110px;left:2%;top:40%;
+                  animation-duration:5.6s;animation-delay:-0.8s;"
+           data-parallax-speed="0.028">
+        <img src="images/bubble5.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:170px;height:170px;left:0.5%;bottom:6%;
+                  animation-duration:8.8s;animation-delay:-5.5s;"
+           data-parallax-speed="0.015"
+           data-parallax-invert="true">
+        <img src="images/bubble1.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:150px;height:150px;right:1%;top:14%;
+                  animation-duration:6.1s;animation-delay:-3.7s;"
+           data-parallax-speed="0.017"
+           data-parallax-invert="true">
+        <img src="images/bubble6.png" alt="" />
+      </div>
+
+      <div class="bubble"
+           style="width:120px;height:120px;right:1.5%;bottom:18%;
+                  animation-duration:5.3s;animation-delay:-1.4s;"
+           data-parallax-speed="0.023">
+        <img src="images/bubble4.png" alt="" />
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
