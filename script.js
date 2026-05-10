@@ -1,13 +1,5 @@
-/* ============================================================
-   PERSONAL WEBSITE — script.js
-   Page transitions (directional slide), bubble parallax, nav helpers.
-   ============================================================ */
-
 'use strict';
 
-/* ── Page order for directional transitions ───────────────── */
-// Pages are ordered: Home(0) → Blog(1) → Gallery(2) → Contact(3)
-// Navigating to a higher index slides left; lower index slides right.
 const PAGE_ORDER = ['index.html', 'blog.html', 'gallery.html', 'contact.html'];
 
 function getCurrentPageIndex() {
@@ -16,7 +8,6 @@ function getCurrentPageIndex() {
   return idx === -1 ? 0 : idx;
 }
 
-/* ── Page Transition ──────────────────────────────────────── */
 (function initPageTransitions() {
   const overlay = document.getElementById('page-overlay');
   if (!overlay) return;
@@ -30,17 +21,13 @@ function getCurrentPageIndex() {
 
       e.preventDefault();
 
-      // Determine direction
       const targetPage = href.split('/').pop() || 'index.html';
       const targetIndex = PAGE_ORDER.indexOf(targetPage);
-      // Going to a higher-indexed page: slide content out to the left
-      // Going to a lower-indexed page: slide content out to the right
+      
       const direction = targetIndex > currentIndex ? 'left' : 'right';
 
-      // Store direction for the incoming page to read on load
       sessionStorage.setItem('slideDir', direction === 'left' ? 'right' : 'left');
 
-      // Fade overlay
       overlay.classList.add('active');
 
       setTimeout(() => {
@@ -49,7 +36,6 @@ function getCurrentPageIndex() {
     });
   });
 
-  // On page load, apply the stored slide direction to <html>
   const incomingDir = sessionStorage.getItem('slideDir');
   if (incomingDir) {
     document.documentElement.setAttribute('data-slide-dir', incomingDir);
@@ -57,7 +43,6 @@ function getCurrentPageIndex() {
   }
 })();
 
-/* ── Highlight Active Nav Item ────────────────────────────── */
 (function markActiveNav() {
   const current = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('a.nav-item').forEach(link => {
@@ -66,7 +51,6 @@ function getCurrentPageIndex() {
   });
 })();
 
-/* ── Bubble Subtle Mouse Parallax ────────────────────────── */
 (function initParallax() {
   const bubbles = document.querySelectorAll('.bubble');
   if (!bubbles.length) return;
@@ -112,7 +96,6 @@ function getCurrentPageIndex() {
   });
 })();
 
-/* ── Profile Bubble Mouse Parallax (home only) ─────────────── */
 (function initProfileParallax() {
   const profile = document.querySelector('.bubble-profile');
   if (!profile) return;
@@ -134,7 +117,6 @@ function getCurrentPageIndex() {
   tick();
 })();
 
-/* ── Gallery: Video play/pause toggle ────────────────────── */
 (function initVideoItems() {
   const videoItems = document.querySelectorAll('.gallery-item--video');
   if (!videoItems.length) return;
@@ -155,9 +137,7 @@ function getCurrentPageIndex() {
   });
 })();
 
-/* ── Gallery Lightbox (photos only) ──────────────────────── */
 (function initGalleryLightbox() {
-  // Only photo items (not video)
   const items = document.querySelectorAll('.gallery-item:not(.gallery-item--video)');
   if (!items.length) return;
 
